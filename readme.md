@@ -3,7 +3,7 @@
 
 ### Overview
 
-[The Daily Byte](http://thedailybyte.maximus-powers.com) is a dynamic news aggregator project, showcasing the power of AI in transforming traditional content into a flexible and multimodal experience. Everyday morning this website fetches news articles, then uses AI not just to curate and rework the content, but to blend it into a single page, seamless, one-stop-shop.
+[The Daily Byte](http://thedailybyte.maximus-powers.com) is a dynamic news aggregator project, showcasing the power of AI in transforming traditional content into a flexible and multimodal experience. Every morning this website fetches news articles, then uses AI not just to curate and rework the content, but to blend it into a single page, seamless, one-stop-shop.
 
 
 ### What's Inside
