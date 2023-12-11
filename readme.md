@@ -10,7 +10,7 @@
 
 **News Aggregation**: Concise, AI-rewritten news summaries from various sources.
 
-**AI-Powered Podcast**: A janky feature where AI scripts read out news articles.
+**AI-Powered Podcast**: A janky feature where an llm writes a podcast script from todays news.
 
 **Dall-E 3 Imagery**: The Daily Byte generates one image per day to go alongside the top news story.
 
