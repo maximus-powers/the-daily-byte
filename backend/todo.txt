@@ -1,0 +1,13 @@
+Things to do to implement the audio:
+- Add a section to the landing table for the mp3 file
+- Update the app.py procedure
+    - Rewrite it to remove the landing object, basically remove linear dependencies (outside of app.py)
+    - Call the mp3 file
+    - Set the refresh function on a timer
+    - Create an endpoint that simply calls the data from the db and populates the react app
+- Add a button to listen to the mp3 file on the react app
+
+Other things to do before publishing v1:
+- Remove the account stuff
+- Containerize the app
+- Host it on a python runtime, add it to my digital ocean instances 
