@@ -77,8 +77,7 @@ def get_content():
         # categories: {category: [{headline: str, summary: str, url: str}, ...], ...}
     # }
 
-    response = jsonify(db_content)
-    return response, 200
+    return jsonify(db_content)
 
 
 '''FUNCTIONS'''
