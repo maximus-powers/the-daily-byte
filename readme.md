@@ -12,7 +12,7 @@
 
 **AI-Powered Podcast**: A janky feature where an llm writes a podcast script from todays news.
 
-**Dall-E 3 Imagery**: The Daily Byte generates one image per day to go alongside the top news story.
+**Dall-E 3 Imagery**: The Daily Byte generates one image everyday to go alongside the top news story.
 
 ---
 
