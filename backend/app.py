@@ -16,7 +16,6 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 load_dotenv()
-db_obj = dbObject()
 llm_obj = LLMObject()
 news_obj = NewsObject()
 landing_obj = landingObject()
@@ -30,30 +29,37 @@ econ_obj = EconObject()
 # do I need to do some check here to prevent signup spamming
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    db_obj = dbObject() # init include the setup db connection
     email = request.headers.get('Email')
     password = request.headers.get('Password')
     first_name = request.headers.get('fName')
     categories = request.headers.get('Categories')
 
     db_obj.add_user(email, password, first_name, categories)
+    db_obj.close()
     return jsonify({"success": "User added successfully"}), 200    
 
 # 'Email' and 'Categories' in the header
 @app.route('/update_settings', methods=['GET', 'POST'])
 def update_settings():
+    db_obj = dbObject() # init include the setup db connection
     email = request.headers.get('Email')
     categories = request.headers.get('Categories')
 
     db_obj.update_user_settings(email, categories)
+    db_obj.close()
     return jsonify({"success": "User settings updated successfully"}), 200
 
 # 'Email' and 'Password' in the header
 @app.route('/auth_user', methods=['GET', 'POST'])
 def auth_user():
+    db_obj = dbObject() # init include the setup db connection
     email = request.headers.get('Email')
     password = request.headers.get('Password')
+    auth_bool = db_obj.auth_user(email, password)
+    db_obj.close()
 
-    if db_obj.auth_user(email, password): # if user is authenticated
+    if auth_bool: # if user is authenticated
         return jsonify({"success": "User authenticated successfully"}), 200
     else: # if not
         return jsonify({"error": "User authentication failed"}), 401
@@ -63,8 +69,10 @@ def auth_user():
 ################# NEWS ####################            
 @app.route('/get_content')
 def get_content():
+    db_obj = dbObject() # init include the setup db connection
     user_id = 2 # hard coded to 2 (the general user id, for anyone). add signups later that get  user id from email
     db_content = db_obj.call_all_content(user_id)
+    db_obj.close()
 
     print('JSON sent')
     # db_content = {
@@ -83,6 +91,7 @@ def get_content():
 '''FUNCTIONS'''
 def refresh_content():
     print('Running refresh content')
+    db_obj = dbObject() # init include the setup db connection
     category_list = db_obj.get_user_categories(2).split(',')
 
     results = {category: [] for category in category_list} # need to init this here with all the categories for the loop to populate
@@ -136,9 +145,11 @@ def refresh_content():
     econ_data = econ_obj.get_econ_data()
     db_obj.update_econ_data(2, econ_data)
 
+    db_obj.close()
+
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=refresh_content, trigger=CronTrigger(hour=6, minute=30)) # runs at 4am
+scheduler.add_job(func=refresh_content, trigger=CronTrigger(hour=4, minute=00)) # runs at 4am
 scheduler.start()
 # refresh_content() # run it once on startup
 

@@ -1,0 +1,662 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.1.0
+2 info using node@v20.9.0
+3 timing npm:load:whichnode Completed in 2ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 5ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/root/.npmrc Completed in 3ms
+11 timing config:load:user Completed in 3ms
+12 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 1ms
+14 timing config:load:setEnvs Completed in 4ms
+15 timing config:load Completed in 18ms
+16 timing npm:load:configload Completed in 18ms
+17 timing config:load:flatten Completed in 4ms
+18 timing npm:load:mkdirpcache Completed in 1ms
+19 timing npm:load:mkdirplogs Completed in 1ms
+20 verbose title npm install serve
+21 verbose argv "install" "--global" "serve"
+22 timing npm:load:setTitle Completed in 1ms
+23 timing npm:load:display Completed in 2ms
+24 verbose logfile logs-max:10 dir:/root/.npm/_logs/2023-12-11T11_45_59_789Z-
+25 verbose logfile /root/.npm/_logs/2023-12-11T11_45_59_789Z-debug-0.log
+26 timing npm:load:logFile Completed in 14ms
+27 timing npm:load:timers Completed in 0ms
+28 timing npm:load:configScope Completed in 0ms
+29 timing npm:load Completed in 71ms
+30 timing config:load:flatten Completed in 25ms
+31 timing arborist:ctor Completed in 2ms
+32 timing idealTree:init Completed in 14ms
+33 timing idealTree:userRequests Completed in 5ms
+34 silly idealTree buildDeps
+35 silly fetch manifest serve@*
+36 silly logfile done cleaning log files
+37 http fetch GET 200 https://registry.npmjs.org/serve 1885ms (cache miss)
+38 silly placeDep ROOT serve@14.2.1 OK for:  want: *
+39 silly fetch manifest @zeit/schemas@2.29.0
+40 silly fetch manifest ajv@8.11.0
+41 silly fetch manifest arg@5.0.2
+42 silly fetch manifest boxen@7.0.0
+43 silly fetch manifest chalk@5.0.1
+44 silly fetch manifest chalk-template@0.4.0
+45 silly fetch manifest clipboardy@3.0.0
+46 silly fetch manifest compression@1.7.4
+47 silly fetch manifest is-port-reachable@4.0.0
+48 silly fetch manifest serve-handler@6.1.5
+49 silly fetch manifest update-check@1.5.4
+50 http fetch GET 200 https://registry.npmjs.org/ajv 466ms (cache miss)
+51 http fetch GET 200 https://registry.npmjs.org/arg 495ms (cache miss)
+52 http fetch GET 200 https://registry.npmjs.org/chalk 518ms (cache miss)
+53 http fetch GET 200 https://registry.npmjs.org/compression 517ms (cache miss)
+54 http fetch GET 200 https://registry.npmjs.org/chalk-template 849ms (cache miss)
+55 http fetch GET 200 https://registry.npmjs.org/clipboardy 850ms (cache miss)
+56 http fetch GET 200 https://registry.npmjs.org/boxen 871ms (cache miss)
+57 http fetch GET 200 https://registry.npmjs.org/is-port-reachable 900ms (cache miss)
+58 http fetch GET 200 https://registry.npmjs.org/serve-handler 915ms (cache miss)
+59 http fetch GET 200 https://registry.npmjs.org/update-check 917ms (cache miss)
+60 http fetch GET 200 https://registry.npmjs.org/@zeit%2fschemas 1375ms (cache miss)
+61 timing idealTree:#root Completed in 3380ms
+62 silly placeDep node_modules/serve @zeit/schemas@2.29.0 OK for: serve@14.2.1 want: 2.29.0
+63 silly placeDep node_modules/serve ajv@8.11.0 OK for: serve@14.2.1 want: 8.11.0
+64 silly fetch manifest fast-deep-equal@^3.1.1
+65 silly fetch manifest json-schema-traverse@^1.0.0
+66 silly fetch manifest require-from-string@^2.0.2
+67 silly fetch manifest uri-js@^4.2.2
+68 silly placeDep node_modules/serve arg@5.0.2 OK for: serve@14.2.1 want: 5.0.2
+69 silly placeDep node_modules/serve boxen@7.0.0 OK for: serve@14.2.1 want: 7.0.0
+70 silly fetch manifest ansi-align@^3.0.1
+71 silly fetch manifest camelcase@^7.0.0
+72 silly fetch manifest chalk@^5.0.1
+73 silly fetch manifest cli-boxes@^3.0.0
+74 silly fetch manifest string-width@^5.1.2
+75 silly fetch manifest type-fest@^2.13.0
+76 silly fetch manifest widest-line@^4.0.1
+77 silly fetch manifest wrap-ansi@^8.0.1
+78 silly placeDep node_modules/serve chalk@5.0.1 OK for: serve@14.2.1 want: 5.0.1
+79 silly placeDep node_modules/serve chalk-template@0.4.0 OK for: serve@14.2.1 want: 0.4.0
+80 silly fetch manifest chalk@^4.1.2
+81 silly placeDep node_modules/serve clipboardy@3.0.0 OK for: serve@14.2.1 want: 3.0.0
+82 silly fetch manifest arch@^2.2.0
+83 silly fetch manifest execa@^5.1.1
+84 silly fetch manifest is-wsl@^2.2.0
+85 silly placeDep node_modules/serve compression@1.7.4 OK for: serve@14.2.1 want: 1.7.4
+86 silly fetch manifest accepts@~1.3.5
+87 silly fetch manifest bytes@3.0.0
+88 silly fetch manifest compressible@~2.0.16
+89 silly fetch manifest debug@2.6.9
+90 silly fetch manifest on-headers@~1.0.2
+91 silly fetch manifest safe-buffer@5.1.2
+92 silly fetch manifest vary@~1.1.2
+93 silly placeDep node_modules/serve is-port-reachable@4.0.0 OK for: serve@14.2.1 want: 4.0.0
+94 silly placeDep node_modules/serve serve-handler@6.1.5 OK for: serve@14.2.1 want: 6.1.5
+95 silly fetch manifest content-disposition@0.5.2
+96 silly fetch manifest fast-url-parser@1.1.3
+97 silly fetch manifest mime-types@2.1.18
+98 silly fetch manifest minimatch@3.1.2
+99 silly fetch manifest path-is-inside@1.0.2
+100 silly fetch manifest path-to-regexp@2.2.1
+101 silly fetch manifest range-parser@1.2.0
+102 silly placeDep node_modules/serve update-check@1.5.4 OK for: serve@14.2.1 want: 1.5.4
+103 silly fetch manifest registry-auth-token@3.3.2
+104 silly fetch manifest registry-url@3.1.0
+105 http fetch GET 200 https://registry.npmjs.org/cli-boxes 435ms (cache miss)
+106 http fetch GET 200 https://registry.npmjs.org/uri-js 447ms (cache miss)
+107 http fetch GET 200 https://registry.npmjs.org/string-width 554ms (cache miss)
+108 http fetch GET 200 https://registry.npmjs.org/require-from-string 579ms (cache miss)
+109 http fetch GET 200 https://registry.npmjs.org/execa 548ms (cache miss)
+110 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 593ms (cache miss)
+111 http fetch GET 200 https://registry.npmjs.org/ansi-align 586ms (cache miss)
+112 http fetch GET 200 https://registry.npmjs.org/widest-line 583ms (cache miss)
+113 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 597ms (cache miss)
+114 http fetch GET 200 https://registry.npmjs.org/on-headers 580ms (cache miss)
+115 http fetch GET 200 https://registry.npmjs.org/path-is-inside 573ms (cache miss)
+116 http fetch GET 200 https://registry.npmjs.org/vary 582ms (cache miss)
+117 http fetch GET 200 https://registry.npmjs.org/range-parser 573ms (cache miss)
+118 http fetch GET 200 https://registry.npmjs.org/registry-url 560ms (cache miss)
+119 http fetch GET 200 https://registry.npmjs.org/bytes 600ms (cache miss)
+120 http fetch GET 200 https://registry.npmjs.org/arch 607ms (cache miss)
+121 http fetch GET 200 https://registry.npmjs.org/is-wsl 606ms (cache miss)
+122 http fetch GET 200 https://registry.npmjs.org/camelcase 642ms (cache miss)
+123 http fetch GET 200 https://registry.npmjs.org/content-disposition 610ms (cache miss)
+124 http fetch GET 200 https://registry.npmjs.org/wrap-ansi 636ms (cache miss)
+125 http fetch GET 200 https://registry.npmjs.org/accepts 626ms (cache miss)
+126 http fetch GET 200 https://registry.npmjs.org/safe-buffer 624ms (cache miss)
+127 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 615ms (cache miss)
+128 http fetch GET 200 https://registry.npmjs.org/debug 629ms (cache miss)
+129 http fetch GET 200 https://registry.npmjs.org/mime-types 625ms (cache miss)
+130 http fetch GET 200 https://registry.npmjs.org/minimatch 639ms (cache miss)
+131 http fetch GET 200 https://registry.npmjs.org/fast-url-parser 790ms (cache miss)
+132 http fetch GET 200 https://registry.npmjs.org/compressible 813ms (cache miss)
+133 http fetch GET 200 https://registry.npmjs.org/registry-auth-token 793ms (cache miss)
+134 http fetch GET 200 https://registry.npmjs.org/type-fest 846ms (cache miss)
+135 timing idealTree:node_modules/serve Completed in 1016ms
+136 timing idealTree:node_modules/serve/node_modules/@zeit/schemas Completed in 0ms
+137 silly placeDep node_modules/serve fast-deep-equal@3.1.3 OK for: ajv@8.11.0 want: ^3.1.1
+138 silly placeDep node_modules/serve json-schema-traverse@1.0.0 OK for: ajv@8.11.0 want: ^1.0.0
+139 silly placeDep node_modules/serve require-from-string@2.0.2 OK for: ajv@8.11.0 want: ^2.0.2
+140 silly placeDep node_modules/serve uri-js@4.4.1 OK for: ajv@8.11.0 want: ^4.2.2
+141 silly fetch manifest punycode@^2.1.0
+142 http fetch GET 200 https://registry.npmjs.org/punycode 85ms (cache miss)
+143 timing idealTree:node_modules/serve/node_modules/ajv Completed in 101ms
+144 timing idealTree:node_modules/serve/node_modules/arg Completed in 0ms
+145 silly placeDep node_modules/serve ansi-align@3.0.1 OK for: boxen@7.0.0 want: ^3.0.1
+146 silly fetch manifest string-width@^4.1.0
+147 silly placeDep node_modules/serve camelcase@7.0.1 OK for: boxen@7.0.0 want: ^7.0.0
+148 silly placeDep node_modules/serve cli-boxes@3.0.0 OK for: boxen@7.0.0 want: ^3.0.0
+149 silly placeDep node_modules/serve string-width@5.1.2 OK for: boxen@7.0.0 want: ^5.1.2
+150 silly fetch manifest eastasianwidth@^0.2.0
+151 silly fetch manifest emoji-regex@^9.2.2
+152 silly fetch manifest strip-ansi@^7.0.1
+153 silly placeDep node_modules/serve type-fest@2.19.0 OK for: boxen@7.0.0 want: ^2.13.0
+154 silly placeDep node_modules/serve widest-line@4.0.1 OK for: boxen@7.0.0 want: ^4.0.1
+155 silly placeDep node_modules/serve wrap-ansi@8.1.0 OK for: boxen@7.0.0 want: ^8.0.1
+156 silly fetch manifest ansi-styles@^6.1.0
+157 http fetch GET 200 https://registry.npmjs.org/ansi-styles 57ms (cache miss)
+158 http fetch GET 200 https://registry.npmjs.org/eastasianwidth 67ms (cache miss)
+159 http fetch GET 200 https://registry.npmjs.org/emoji-regex 68ms (cache miss)
+160 http fetch GET 200 https://registry.npmjs.org/strip-ansi 499ms (cache miss)
+161 timing idealTree:node_modules/serve/node_modules/boxen Completed in 521ms
+162 silly placeDep node_modules/serve/node_modules/ansi-align string-width@4.2.3 OK for: ansi-align@3.0.1 want: ^4.1.0
+163 silly fetch manifest emoji-regex@^8.0.0
+164 silly fetch manifest is-fullwidth-code-point@^3.0.0
+165 silly fetch manifest strip-ansi@^6.0.1
+166 http fetch GET 200 https://registry.npmjs.org/is-fullwidth-code-point 70ms (cache miss)
+167 timing idealTree:node_modules/serve/node_modules/ansi-align Completed in 77ms
+168 timing idealTree:node_modules/serve/node_modules/camelcase Completed in 0ms
+169 timing idealTree:node_modules/serve/node_modules/chalk Completed in 0ms
+170 silly placeDep node_modules/serve/node_modules/chalk-template chalk@4.1.2 OK for: chalk-template@0.4.0 want: ^4.1.2
+171 silly fetch manifest ansi-styles@^4.1.0
+172 silly fetch manifest supports-color@^7.1.0
+173 http fetch GET 200 https://registry.npmjs.org/supports-color 84ms (cache miss)
+174 timing idealTree:node_modules/serve/node_modules/chalk-template Completed in 93ms
+175 timing idealTree:node_modules/serve/node_modules/cli-boxes Completed in 0ms
+176 silly placeDep node_modules/serve arch@2.2.0 OK for: clipboardy@3.0.0 want: ^2.2.0
+177 silly placeDep node_modules/serve execa@5.1.1 OK for: clipboardy@3.0.0 want: ^5.1.1
+178 silly fetch manifest cross-spawn@^7.0.3
+179 silly fetch manifest get-stream@^6.0.0
+180 silly fetch manifest human-signals@^2.1.0
+181 silly fetch manifest is-stream@^2.0.0
+182 silly fetch manifest merge-stream@^2.0.0
+183 silly fetch manifest npm-run-path@^4.0.1
+184 silly fetch manifest onetime@^5.1.2
+185 silly fetch manifest signal-exit@^3.0.3
+186 silly fetch manifest strip-final-newline@^2.0.0
+187 silly placeDep node_modules/serve is-wsl@2.2.0 OK for: clipboardy@3.0.0 want: ^2.2.0
+188 silly fetch manifest is-docker@^2.0.0
+189 http fetch GET 200 https://registry.npmjs.org/cross-spawn 193ms (cache miss)
+190 http fetch GET 200 https://registry.npmjs.org/is-stream 297ms (cache miss)
+191 http fetch GET 200 https://registry.npmjs.org/onetime 295ms (cache miss)
+192 http fetch GET 200 https://registry.npmjs.org/npm-run-path 298ms (cache miss)
+193 http fetch GET 200 https://registry.npmjs.org/signal-exit 296ms (cache miss)
+194 http fetch GET 200 https://registry.npmjs.org/human-signals 304ms (cache miss)
+195 http fetch GET 200 https://registry.npmjs.org/merge-stream 303ms (cache miss)
+196 http fetch GET 200 https://registry.npmjs.org/is-docker 300ms (cache miss)
+197 http fetch GET 200 https://registry.npmjs.org/get-stream 312ms (cache miss)
+198 http fetch GET 200 https://registry.npmjs.org/strip-final-newline 512ms (cache miss)
+199 timing idealTree:node_modules/serve/node_modules/clipboardy Completed in 526ms
+200 timing idealTree:node_modules/serve/node_modules/arch Completed in 0ms
+201 silly placeDep node_modules/serve accepts@1.3.8 OK for: compression@1.7.4 want: ~1.3.5
+202 silly fetch manifest mime-types@~2.1.34
+203 silly fetch manifest negotiator@0.6.3
+204 silly placeDep node_modules/serve bytes@3.0.0 OK for: compression@1.7.4 want: 3.0.0
+205 silly placeDep node_modules/serve compressible@2.0.18 OK for: compression@1.7.4 want: ~2.0.16
+206 silly fetch manifest mime-db@>= 1.43.0 < 2
+207 silly placeDep node_modules/serve debug@2.6.9 OK for: compression@1.7.4 want: 2.6.9
+208 silly fetch manifest ms@2.0.0
+209 silly placeDep node_modules/serve on-headers@1.0.2 OK for: compression@1.7.4 want: ~1.0.2
+210 silly placeDep node_modules/serve safe-buffer@5.1.2 OK for: compression@1.7.4 want: 5.1.2
+211 silly placeDep node_modules/serve vary@1.1.2 OK for: compression@1.7.4 want: ~1.1.2
+212 http fetch GET 200 https://registry.npmjs.org/ms 169ms (cache miss)
+213 http fetch GET 200 https://registry.npmjs.org/mime-db 181ms (cache miss)
+214 http fetch GET 200 https://registry.npmjs.org/negotiator 186ms (cache miss)
+215 timing idealTree:node_modules/serve/node_modules/compression Completed in 192ms
+216 silly placeDep node_modules/serve mime-types@2.1.35 OK for: accepts@1.3.8 want: ~2.1.34
+217 silly fetch manifest mime-db@1.52.0
+218 silly placeDep node_modules/serve negotiator@0.6.3 OK for: accepts@1.3.8 want: 0.6.3
+219 timing idealTree:node_modules/serve/node_modules/accepts Completed in 4ms
+220 timing idealTree:node_modules/serve/node_modules/bytes Completed in 0ms
+221 silly placeDep node_modules/serve mime-db@1.52.0 OK for: compressible@2.0.18 want: >= 1.43.0 < 2
+222 timing idealTree:node_modules/serve/node_modules/compressible Completed in 1ms
+223 silly placeDep node_modules/serve ms@2.0.0 OK for: debug@2.6.9 want: 2.0.0
+224 timing idealTree:node_modules/serve/node_modules/debug Completed in 1ms
+225 silly placeDep node_modules/serve cross-spawn@7.0.3 OK for: execa@5.1.1 want: ^7.0.3
+226 silly fetch manifest path-key@^3.1.0
+227 silly fetch manifest shebang-command@^2.0.0
+228 silly fetch manifest which@^2.0.1
+229 silly placeDep node_modules/serve get-stream@6.0.1 OK for: execa@5.1.1 want: ^6.0.0
+230 silly placeDep node_modules/serve human-signals@2.1.0 OK for: execa@5.1.1 want: ^2.1.0
+231 silly placeDep node_modules/serve is-stream@2.0.1 OK for: execa@5.1.1 want: ^2.0.0
+232 silly placeDep node_modules/serve merge-stream@2.0.0 OK for: execa@5.1.1 want: ^2.0.0
+233 silly placeDep node_modules/serve npm-run-path@4.0.1 OK for: execa@5.1.1 want: ^4.0.1
+234 silly fetch manifest path-key@^3.0.0
+235 silly placeDep node_modules/serve onetime@5.1.2 OK for: execa@5.1.1 want: ^5.1.2
+236 silly fetch manifest mimic-fn@^2.1.0
+237 silly placeDep node_modules/serve signal-exit@3.0.7 OK for: execa@5.1.1 want: ^3.0.3
+238 silly placeDep node_modules/serve strip-final-newline@2.0.0 OK for: execa@5.1.1 want: ^2.0.0
+239 http fetch GET 200 https://registry.npmjs.org/path-key 81ms (cache miss)
+240 http fetch GET 200 https://registry.npmjs.org/shebang-command 84ms (cache miss)
+241 http fetch GET 200 https://registry.npmjs.org/path-key 76ms (cache miss)
+242 http fetch GET 200 https://registry.npmjs.org/mimic-fn 77ms (cache miss)
+243 http fetch GET 200 https://registry.npmjs.org/which 91ms (cache miss)
+244 timing idealTree:node_modules/serve/node_modules/execa Completed in 100ms
+245 silly placeDep node_modules/serve path-key@3.1.1 OK for: cross-spawn@7.0.3 want: ^3.1.0
+246 silly placeDep node_modules/serve shebang-command@2.0.0 OK for: cross-spawn@7.0.3 want: ^2.0.0
+247 silly fetch manifest shebang-regex@^3.0.0
+248 silly placeDep node_modules/serve which@2.0.2 OK for: cross-spawn@7.0.3 want: ^2.0.1
+249 silly fetch manifest isexe@^2.0.0
+250 http fetch GET 200 https://registry.npmjs.org/shebang-regex 56ms (cache miss)
+251 http fetch GET 200 https://registry.npmjs.org/isexe 57ms (cache miss)
+252 timing idealTree:node_modules/serve/node_modules/cross-spawn Completed in 69ms
+253 timing idealTree:node_modules/serve/node_modules/fast-deep-equal Completed in 0ms
+254 timing idealTree:node_modules/serve/node_modules/get-stream Completed in 0ms
+255 timing idealTree:node_modules/serve/node_modules/human-signals Completed in 0ms
+256 timing idealTree:node_modules/serve/node_modules/is-port-reachable Completed in 0ms
+257 timing idealTree:node_modules/serve/node_modules/is-stream Completed in 0ms
+258 silly placeDep node_modules/serve is-docker@2.2.1 OK for: is-wsl@2.2.0 want: ^2.0.0
+259 timing idealTree:node_modules/serve/node_modules/is-wsl Completed in 3ms
+260 timing idealTree:node_modules/serve/node_modules/is-docker Completed in 0ms
+261 timing idealTree:node_modules/serve/node_modules/json-schema-traverse Completed in 0ms
+262 timing idealTree:node_modules/serve/node_modules/merge-stream Completed in 0ms
+263 timing idealTree:node_modules/serve/node_modules/mime-db Completed in 0ms
+264 timing idealTree:node_modules/serve/node_modules/mime-types Completed in 0ms
+265 timing idealTree:node_modules/serve/node_modules/ms Completed in 0ms
+266 timing idealTree:node_modules/serve/node_modules/negotiator Completed in 0ms
+267 timing idealTree:node_modules/serve/node_modules/npm-run-path Completed in 0ms
+268 timing idealTree:node_modules/serve/node_modules/on-headers Completed in 0ms
+269 silly placeDep node_modules/serve mimic-fn@2.1.0 OK for: onetime@5.1.2 want: ^2.1.0
+270 timing idealTree:node_modules/serve/node_modules/onetime Completed in 2ms
+271 timing idealTree:node_modules/serve/node_modules/mimic-fn Completed in 0ms
+272 timing idealTree:node_modules/serve/node_modules/path-key Completed in 0ms
+273 timing idealTree:node_modules/serve/node_modules/require-from-string Completed in 0ms
+274 timing idealTree:node_modules/serve/node_modules/safe-buffer Completed in 0ms
+275 silly placeDep node_modules/serve content-disposition@0.5.2 OK for: serve-handler@6.1.5 want: 0.5.2
+276 silly placeDep node_modules/serve fast-url-parser@1.1.3 OK for: serve-handler@6.1.5 want: 1.1.3
+277 silly fetch manifest punycode@^1.3.2
+278 silly placeDep node_modules/serve/node_modules/serve-handler mime-types@2.1.18 OK for: serve-handler@6.1.5 want: 2.1.18
+279 silly fetch manifest mime-db@~1.33.0
+280 silly placeDep node_modules/serve minimatch@3.1.2 OK for: serve-handler@6.1.5 want: 3.1.2
+281 silly fetch manifest brace-expansion@^1.1.7
+282 silly placeDep node_modules/serve path-is-inside@1.0.2 OK for: serve-handler@6.1.5 want: 1.0.2
+283 silly placeDep node_modules/serve path-to-regexp@2.2.1 OK for: serve-handler@6.1.5 want: 2.2.1
+284 silly placeDep node_modules/serve range-parser@1.2.0 OK for: serve-handler@6.1.5 want: 1.2.0
+285 http fetch GET 200 https://registry.npmjs.org/brace-expansion 73ms (cache miss)
+286 timing idealTree:node_modules/serve/node_modules/serve-handler Completed in 97ms
+287 timing idealTree:node_modules/serve/node_modules/content-disposition Completed in 0ms
+288 silly placeDep node_modules/serve punycode@1.4.1 OK for: fast-url-parser@1.1.3 want: ^1.3.2
+289 timing idealTree:node_modules/serve/node_modules/fast-url-parser Completed in 2ms
+290 silly placeDep node_modules/serve brace-expansion@1.1.11 OK for: minimatch@3.1.2 want: ^1.1.7
+291 silly fetch manifest balanced-match@^1.0.0
+292 silly fetch manifest concat-map@0.0.1
+293 http fetch GET 200 https://registry.npmjs.org/balanced-match 38ms (cache miss)
+294 http fetch GET 200 https://registry.npmjs.org/concat-map 52ms (cache miss)
+295 timing idealTree:node_modules/serve/node_modules/minimatch Completed in 55ms
+296 silly placeDep node_modules/serve balanced-match@1.0.2 OK for: brace-expansion@1.1.11 want: ^1.0.0
+297 silly placeDep node_modules/serve concat-map@0.0.1 OK for: brace-expansion@1.1.11 want: 0.0.1
+298 timing idealTree:node_modules/serve/node_modules/brace-expansion Completed in 3ms
+299 timing idealTree:node_modules/serve/node_modules/balanced-match Completed in 0ms
+300 timing idealTree:node_modules/serve/node_modules/concat-map Completed in 0ms
+301 timing idealTree:node_modules/serve/node_modules/path-is-inside Completed in 0ms
+302 timing idealTree:node_modules/serve/node_modules/path-to-regexp Completed in 0ms
+303 timing idealTree:node_modules/serve/node_modules/punycode Completed in 0ms
+304 timing idealTree:node_modules/serve/node_modules/range-parser Completed in 0ms
+305 silly placeDep node_modules/serve shebang-regex@3.0.0 OK for: shebang-command@2.0.0 want: ^3.0.0
+306 timing idealTree:node_modules/serve/node_modules/shebang-command Completed in 1ms
+307 timing idealTree:node_modules/serve/node_modules/shebang-regex Completed in 0ms
+308 timing idealTree:node_modules/serve/node_modules/signal-exit Completed in 0ms
+309 silly placeDep node_modules/serve eastasianwidth@0.2.0 OK for: string-width@5.1.2 want: ^0.2.0
+310 silly placeDep node_modules/serve emoji-regex@9.2.2 OK for: string-width@5.1.2 want: ^9.2.2
+311 silly placeDep node_modules/serve strip-ansi@7.1.0 OK for: string-width@5.1.2 want: ^7.0.1
+312 silly fetch manifest ansi-regex@^6.0.1
+313 http fetch GET 200 https://registry.npmjs.org/ansi-regex 50ms (cache miss)
+314 timing idealTree:node_modules/serve/node_modules/string-width Completed in 55ms
+315 timing idealTree:node_modules/serve/node_modules/eastasianwidth Completed in 1ms
+316 timing idealTree:node_modules/serve/node_modules/emoji-regex Completed in 0ms
+317 silly placeDep node_modules/serve ansi-regex@6.0.1 OK for: strip-ansi@7.1.0 want: ^6.0.1
+318 timing idealTree:node_modules/serve/node_modules/strip-ansi Completed in 1ms
+319 timing idealTree:node_modules/serve/node_modules/ansi-regex Completed in 0ms
+320 timing idealTree:node_modules/serve/node_modules/strip-final-newline Completed in 0ms
+321 timing idealTree:node_modules/serve/node_modules/type-fest Completed in 0ms
+322 silly placeDep node_modules/serve registry-auth-token@3.3.2 OK for: update-check@1.5.4 want: 3.3.2
+323 silly fetch manifest rc@^1.1.6
+324 silly placeDep node_modules/serve registry-url@3.1.0 OK for: update-check@1.5.4 want: 3.1.0
+325 silly fetch manifest rc@^1.0.1
+326 http fetch GET 200 https://registry.npmjs.org/rc 51ms (cache miss)
+327 http fetch GET 200 https://registry.npmjs.org/rc 55ms (cache miss)
+328 timing idealTree:node_modules/serve/node_modules/update-check Completed in 60ms
+329 silly placeDep node_modules/serve rc@1.2.8 OK for: registry-auth-token@3.3.2 want: ^1.1.6
+330 silly fetch manifest deep-extend@^0.6.0
+331 silly fetch manifest ini@~1.3.0
+332 silly fetch manifest minimist@^1.2.0
+333 silly fetch manifest strip-json-comments@~2.0.1
+334 http fetch GET 200 https://registry.npmjs.org/minimist 79ms (cache miss)
+335 http fetch GET 200 https://registry.npmjs.org/deep-extend 96ms (cache miss)
+336 http fetch GET 200 https://registry.npmjs.org/ini 100ms (cache miss)
+337 http fetch GET 200 https://registry.npmjs.org/strip-json-comments 536ms (cache miss)
+338 timing idealTree:node_modules/serve/node_modules/registry-auth-token Completed in 553ms
+339 silly placeDep node_modules/serve deep-extend@0.6.0 OK for: rc@1.2.8 want: ^0.6.0
+340 silly placeDep node_modules/serve ini@1.3.8 OK for: rc@1.2.8 want: ~1.3.0
+341 silly placeDep node_modules/serve minimist@1.2.8 OK for: rc@1.2.8 want: ^1.2.0
+342 silly placeDep node_modules/serve strip-json-comments@2.0.1 OK for: rc@1.2.8 want: ~2.0.1
+343 timing idealTree:node_modules/serve/node_modules/rc Completed in 12ms
+344 timing idealTree:node_modules/serve/node_modules/deep-extend Completed in 0ms
+345 timing idealTree:node_modules/serve/node_modules/ini Completed in 0ms
+346 timing idealTree:node_modules/serve/node_modules/minimist Completed in 0ms
+347 timing idealTree:node_modules/serve/node_modules/registry-url Completed in 0ms
+348 timing idealTree:node_modules/serve/node_modules/strip-json-comments Completed in 0ms
+349 silly placeDep node_modules/serve/node_modules/uri-js punycode@2.3.1 OK for: uri-js@4.4.1 want: ^2.1.0
+350 timing idealTree:node_modules/serve/node_modules/uri-js Completed in 3ms
+351 timing idealTree:node_modules/serve/node_modules/vary Completed in 0ms
+352 silly placeDep node_modules/serve isexe@2.0.0 OK for: which@2.0.2 want: ^2.0.0
+353 timing idealTree:node_modules/serve/node_modules/which Completed in 2ms
+354 timing idealTree:node_modules/serve/node_modules/isexe Completed in 0ms
+355 timing idealTree:node_modules/serve/node_modules/widest-line Completed in 0ms
+356 silly placeDep node_modules/serve ansi-styles@6.2.1 OK for: wrap-ansi@8.1.0 want: ^6.1.0
+357 timing idealTree:node_modules/serve/node_modules/wrap-ansi Completed in 2ms
+358 timing idealTree:node_modules/serve/node_modules/ansi-styles Completed in 0ms
+359 silly placeDep node_modules/serve/node_modules/ansi-align emoji-regex@8.0.0 OK for: string-width@4.2.3 want: ^8.0.0
+360 silly placeDep node_modules/serve is-fullwidth-code-point@3.0.0 OK for: string-width@4.2.3 want: ^3.0.0
+361 silly placeDep node_modules/serve/node_modules/ansi-align strip-ansi@6.0.1 OK for: string-width@4.2.3 want: ^6.0.1
+362 silly fetch manifest ansi-regex@^5.0.1
+363 timing idealTree:node_modules/serve/node_modules/ansi-align/node_modules/string-width Completed in 6ms
+364 timing idealTree:node_modules/serve/node_modules/is-fullwidth-code-point Completed in 0ms
+365 timing idealTree:node_modules/serve/node_modules/ansi-align/node_modules/emoji-regex Completed in 1ms
+366 silly placeDep node_modules/serve/node_modules/ansi-align ansi-regex@5.0.1 OK for: strip-ansi@6.0.1 want: ^5.0.1
+367 timing idealTree:node_modules/serve/node_modules/ansi-align/node_modules/strip-ansi Completed in 1ms
+368 timing idealTree:node_modules/serve/node_modules/ansi-align/node_modules/ansi-regex Completed in 0ms
+369 silly placeDep node_modules/serve/node_modules/chalk-template ansi-styles@4.3.0 OK for: chalk@4.1.2 want: ^4.1.0
+370 silly fetch manifest color-convert@^2.0.1
+371 silly placeDep node_modules/serve supports-color@7.2.0 OK for: chalk@4.1.2 want: ^7.1.0
+372 silly fetch manifest has-flag@^4.0.0
+373 http fetch GET 200 https://registry.npmjs.org/has-flag 82ms (cache miss)
+374 http fetch GET 200 https://registry.npmjs.org/color-convert 89ms (cache miss)
+375 timing idealTree:node_modules/serve/node_modules/chalk-template/node_modules/chalk Completed in 94ms
+376 silly placeDep node_modules/serve has-flag@4.0.0 OK for: supports-color@7.2.0 want: ^4.0.0
+377 timing idealTree:node_modules/serve/node_modules/supports-color Completed in 7ms
+378 timing idealTree:node_modules/serve/node_modules/has-flag Completed in 0ms
+379 silly placeDep node_modules/serve color-convert@2.0.1 OK for: ansi-styles@4.3.0 want: ^2.0.1
+380 silly fetch manifest color-name@~1.1.4
+381 http fetch GET 200 https://registry.npmjs.org/color-name 79ms (cache miss)
+382 timing idealTree:node_modules/serve/node_modules/chalk-template/node_modules/ansi-styles Completed in 88ms
+383 silly placeDep node_modules/serve color-name@1.1.4 OK for: color-convert@2.0.1 want: ~1.1.4
+384 timing idealTree:node_modules/serve/node_modules/color-convert Completed in 4ms
+385 timing idealTree:node_modules/serve/node_modules/color-name Completed in 0ms
+386 silly placeDep node_modules/serve/node_modules/serve-handler mime-db@1.33.0 OK for: mime-types@2.1.18 want: ~1.33.0
+387 timing idealTree:node_modules/serve/node_modules/serve-handler/node_modules/mime-types Completed in 6ms
+388 timing idealTree:node_modules/serve/node_modules/serve-handler/node_modules/mime-db Completed in 0ms
+389 timing idealTree:node_modules/serve/node_modules/uri-js/node_modules/punycode Completed in 0ms
+390 timing idealTree:buildDeps Completed in 7154ms
+391 timing idealTree:fixDepFlags Completed in 4ms
+392 timing idealTree Completed in 7185ms
+393 timing reify:loadTrees Completed in 7203ms
+394 timing reify:diffTrees Completed in 5ms
+395 silly reify moves {}
+396 timing reify:retireShallow Completed in 4ms
+397 timing reify:createSparse Completed in 307ms
+398 timing reify:loadBundles Completed in 0ms
+399 silly tarball no local data for ansi-align@https://registry.npmjs.org/ansi-align/-/ansi-align-3.0.1.tgz. Extracting by manifest.
+400 silly tarball no local data for strip-json-comments@https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz. Extracting by manifest.
+401 silly tarball no local data for rc@https://registry.npmjs.org/rc/-/rc-1.2.8.tgz. Extracting by manifest.
+402 silly tarball no local data for deep-extend@https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz. Extracting by manifest.
+403 silly tarball no local data for registry-url@https://registry.npmjs.org/registry-url/-/registry-url-3.1.0.tgz. Extracting by manifest.
+404 silly tarball no local data for registry-auth-token@https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-3.3.2.tgz. Extracting by manifest.
+405 silly tarball no local data for range-parser@https://registry.npmjs.org/range-parser/-/range-parser-1.2.0.tgz. Extracting by manifest.
+406 silly tarball no local data for eastasianwidth@https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz. Extracting by manifest.
+407 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-2.2.1.tgz. Extracting by manifest.
+408 silly tarball no local data for fast-url-parser@https://registry.npmjs.org/fast-url-parser/-/fast-url-parser-1.1.3.tgz. Extracting by manifest.
+409 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz. Extracting by manifest.
+410 silly tarball no local data for content-disposition@https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.2.tgz. Extracting by manifest.
+411 silly tarball no local data for chalk-template@https://registry.npmjs.org/chalk-template/-/chalk-template-0.4.0.tgz. Extracting by manifest.
+412 silly tarball no local data for serve-handler@https://registry.npmjs.org/serve-handler/-/serve-handler-6.1.5.tgz. Extracting by manifest.
+413 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.33.0.tgz. Extracting by manifest.
+414 silly tarball no local data for boxen@https://registry.npmjs.org/boxen/-/boxen-7.0.0.tgz. Extracting by manifest.
+415 silly tarball no local data for serve@https://registry.npmjs.org/serve/-/serve-14.2.1.tgz. Extracting by manifest.
+416 silly tarball no local data for chalk@https://registry.npmjs.org/chalk/-/chalk-5.0.1.tgz. Extracting by manifest.
+417 silly tarball no local data for path-is-inside@https://registry.npmjs.org/path-is-inside/-/path-is-inside-1.0.2.tgz. Extracting by manifest.
+418 silly tarball no local data for punycode@https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz. Extracting by manifest.
+419 silly tarball no local data for arch@https://registry.npmjs.org/arch/-/arch-2.2.0.tgz. Extracting by manifest.
+420 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz. Extracting by manifest.
+421 silly tarball no local data for type-fest@https://registry.npmjs.org/type-fest/-/type-fest-2.19.0.tgz. Extracting by manifest.
+422 silly tarball no local data for string-width@https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz. Extracting by manifest.
+423 silly tarball no local data for cli-boxes@https://registry.npmjs.org/cli-boxes/-/cli-boxes-3.0.0.tgz. Extracting by manifest.
+424 silly tarball no local data for widest-line@https://registry.npmjs.org/widest-line/-/widest-line-4.0.1.tgz. Extracting by manifest.
+425 silly tarball no local data for is-port-reachable@https://registry.npmjs.org/is-port-reachable/-/is-port-reachable-4.0.0.tgz. Extracting by manifest.
+426 silly tarball no local data for punycode@https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz. Extracting by manifest.
+427 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.18.tgz. Extracting by manifest.
+428 silly tarball no local data for clipboardy@https://registry.npmjs.org/clipboardy/-/clipboardy-3.0.0.tgz. Extracting by manifest.
+429 silly tarball no local data for update-check@https://registry.npmjs.org/update-check/-/update-check-1.5.4.tgz. Extracting by manifest.
+430 silly tarball no local data for camelcase@https://registry.npmjs.org/camelcase/-/camelcase-7.0.1.tgz. Extracting by manifest.
+431 silly tarball no local data for ajv@https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz. Extracting by manifest.
+432 silly tarball no local data for @zeit/schemas@https://registry.npmjs.org/@zeit/schemas/-/schemas-2.29.0.tgz. Extracting by manifest.
+433 timing reifyNode:node_modules/serve/node_modules/ini Completed in 1238ms
+434 timing reifyNode:node_modules/serve/node_modules/brace-expansion Completed in 1238ms
+435 timing reifyNode:node_modules/serve/node_modules/ms Completed in 1244ms
+436 timing reifyNode:node_modules/serve/node_modules/require-from-string Completed in 1243ms
+437 timing reifyNode:node_modules/serve/node_modules/compressible Completed in 1245ms
+438 timing reifyNode:node_modules/serve/node_modules/shebang-command Completed in 1248ms
+439 timing reifyNode:node_modules/serve/node_modules/path-key Completed in 1248ms
+440 timing reifyNode:node_modules/serve/node_modules/chalk-template/node_modules/ansi-styles Completed in 1244ms
+441 timing reifyNode:node_modules/serve/node_modules/arg Completed in 1245ms
+442 timing reifyNode:node_modules/serve/node_modules/bytes Completed in 1248ms
+443 timing reifyNode:node_modules/serve/node_modules/merge-stream Completed in 1250ms
+444 timing reifyNode:node_modules/serve/node_modules/color-name Completed in 1260ms
+445 timing reifyNode:node_modules/serve/node_modules/supports-color Completed in 1259ms
+446 timing reifyNode:node_modules/serve/node_modules/strip-final-newline Completed in 1256ms
+447 timing reifyNode:node_modules/serve/node_modules/strip-ansi Completed in 1269ms
+448 timing reifyNode:node_modules/serve/node_modules/ansi-align/node_modules/ansi-regex Completed in 1264ms
+449 timing reifyNode:node_modules/serve/node_modules/signal-exit Completed in 1268ms
+450 timing reifyNode:node_modules/serve/node_modules/shebang-regex Completed in 1270ms
+451 timing reifyNode:node_modules/serve/node_modules/has-flag Completed in 1273ms
+452 timing reifyNode:node_modules/serve/node_modules/ansi-regex Completed in 1276ms
+453 timing reifyNode:node_modules/serve/node_modules/npm-run-path Completed in 1275ms
+454 timing reifyNode:node_modules/serve/node_modules/ansi-align/node_modules/strip-ansi Completed in 1275ms
+455 timing reifyNode:node_modules/serve/node_modules/vary Completed in 1277ms
+456 timing reifyNode:node_modules/serve/node_modules/ansi-align/node_modules/string-width Completed in 1275ms
+457 timing reifyNode:node_modules/serve/node_modules/on-headers Completed in 1277ms
+458 timing reifyNode:node_modules/serve/node_modules/mimic-fn Completed in 1279ms
+459 timing reifyNode:node_modules/serve/node_modules/is-stream Completed in 1279ms
+460 timing reifyNode:node_modules/serve/node_modules/compression Completed in 1276ms
+461 timing reifyNode:node_modules/serve/node_modules/accepts Completed in 1279ms
+462 timing reifyNode:node_modules/serve/node_modules/is-wsl Completed in 1279ms
+463 timing reifyNode:node_modules/serve/node_modules/onetime Completed in 1282ms
+464 timing reifyNode:node_modules/serve/node_modules/is-fullwidth-code-point Completed in 1285ms
+465 timing reifyNode:node_modules/serve/node_modules/is-docker Completed in 1285ms
+466 timing reifyNode:node_modules/serve/node_modules/balanced-match Completed in 1286ms
+467 timing reifyNode:node_modules/serve/node_modules/mime-types Completed in 1287ms
+468 timing reifyNode:node_modules/serve/node_modules/minimatch Completed in 1298ms
+469 timing reifyNode:node_modules/serve/node_modules/which Completed in 1297ms
+470 timing reifyNode:node_modules/serve/node_modules/safe-buffer Completed in 1305ms
+471 timing reifyNode:node_modules/serve/node_modules/get-stream Completed in 1306ms
+472 timing reifyNode:node_modules/serve/node_modules/concat-map Completed in 1332ms
+473 timing reifyNode:node_modules/serve/node_modules/chalk-template/node_modules/chalk Completed in 1338ms
+474 timing reifyNode:node_modules/serve/node_modules/color-convert Completed in 1347ms
+475 timing reifyNode:node_modules/serve/node_modules/isexe Completed in 1348ms
+476 http fetch GET 200 https://registry.npmjs.org/ansi-align/-/ansi-align-3.0.1.tgz 1233ms (cache miss)
+477 timing reifyNode:node_modules/serve/node_modules/ansi-align Completed in 1347ms
+478 http fetch GET 200 https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz 1230ms (cache miss)
+479 timing reifyNode:node_modules/serve/node_modules/strip-json-comments Completed in 1353ms
+480 http fetch GET 200 https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz 1234ms (cache miss)
+481 timing reifyNode:node_modules/serve/node_modules/eastasianwidth Completed in 1362ms
+482 timing reifyNode:node_modules/serve/node_modules/cross-spawn Completed in 1361ms
+483 timing reifyNode:node_modules/serve/node_modules/ansi-align/node_modules/emoji-regex Completed in 1366ms
+484 http fetch GET 200 https://registry.npmjs.org/registry-url/-/registry-url-3.1.0.tgz 1250ms (cache miss)
+485 timing reifyNode:node_modules/serve/node_modules/registry-url Completed in 1376ms
+486 http fetch GET 200 https://registry.npmjs.org/boxen/-/boxen-7.0.0.tgz 1218ms (cache miss)
+487 timing reifyNode:node_modules/serve/node_modules/boxen Completed in 1371ms
+488 http fetch GET 200 https://registry.npmjs.org/fast-url-parser/-/fast-url-parser-1.1.3.tgz 1256ms (cache miss)
+489 timing reifyNode:node_modules/serve/node_modules/fast-url-parser Completed in 1386ms
+490 timing reifyNode:node_modules/serve/node_modules/fast-deep-equal Completed in 1384ms
+491 http fetch GET 200 https://registry.npmjs.org/chalk-template/-/chalk-template-0.4.0.tgz 1255ms (cache miss)
+492 timing reifyNode:node_modules/serve/node_modules/chalk-template Completed in 1385ms
+493 http fetch GET 200 https://registry.npmjs.org/serve-handler/-/serve-handler-6.1.5.tgz 1254ms (cache miss)
+494 timing reifyNode:node_modules/serve/node_modules/serve-handler Completed in 1389ms
+495 http fetch GET 200 https://registry.npmjs.org/range-parser/-/range-parser-1.2.0.tgz 1268ms (cache miss)
+496 timing reifyNode:node_modules/serve/node_modules/range-parser Completed in 1394ms
+497 timing reifyNode:node_modules/serve/node_modules/negotiator Completed in 1394ms
+498 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz 1277ms (cache miss)
+499 timing reifyNode:node_modules/serve/node_modules/ansi-styles Completed in 1411ms
+500 http fetch GET 200 https://registry.npmjs.org/is-port-reachable/-/is-port-reachable-4.0.0.tgz 1218ms (cache miss)
+501 timing reifyNode:node_modules/serve/node_modules/is-port-reachable Completed in 1410ms
+502 http fetch GET 200 https://registry.npmjs.org/path-is-inside/-/path-is-inside-1.0.2.tgz 1242ms (cache miss)
+503 timing reifyNode:node_modules/serve/node_modules/path-is-inside Completed in 1418ms
+504 http fetch GET 200 https://registry.npmjs.org/widest-line/-/widest-line-4.0.1.tgz 1223ms (cache miss)
+505 timing reifyNode:node_modules/serve/node_modules/widest-line Completed in 1416ms
+506 timing reifyNode:node_modules/serve/node_modules/execa Completed in 1424ms
+507 timing reifyNode:node_modules/serve/node_modules/human-signals Completed in 1427ms
+508 http fetch GET 200 https://registry.npmjs.org/cli-boxes/-/cli-boxes-3.0.0.tgz 1235ms (cache miss)
+509 timing reifyNode:node_modules/serve/node_modules/cli-boxes Completed in 1425ms
+510 http fetch GET 200 https://registry.npmjs.org/arch/-/arch-2.2.0.tgz 1238ms (cache miss)
+511 timing reifyNode:node_modules/serve/node_modules/arch Completed in 1428ms
+512 http fetch GET 200 https://registry.npmjs.org/update-check/-/update-check-1.5.4.tgz 1215ms (cache miss)
+513 timing reifyNode:node_modules/serve/node_modules/update-check Completed in 1426ms
+514 http fetch GET 200 https://registry.npmjs.org/camelcase/-/camelcase-7.0.1.tgz 1216ms (cache miss)
+515 timing reifyNode:node_modules/serve/node_modules/camelcase Completed in 1428ms
+516 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz 1238ms (cache miss)
+517 timing reifyNode:node_modules/serve/node_modules/string-width Completed in 1428ms
+518 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz 1241ms (cache miss)
+519 timing reifyNode:node_modules/serve/node_modules/wrap-ansi Completed in 1430ms
+520 timing reifyNode:node_modules/serve/node_modules/json-schema-traverse Completed in 1428ms
+521 http fetch GET 200 https://registry.npmjs.org/serve/-/serve-14.2.1.tgz 1276ms (cache miss)
+522 timing reifyNode:node_modules/serve Completed in 1439ms
+523 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.18.tgz 1239ms (cache miss)
+524 timing reifyNode:node_modules/serve/node_modules/serve-handler/node_modules/mime-types Completed in 1431ms
+525 http fetch GET 200 https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz 1314ms (cache miss)
+526 timing reifyNode:node_modules/serve/node_modules/deep-extend Completed in 1438ms
+527 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.33.0.tgz 1297ms (cache miss)
+528 timing reifyNode:node_modules/serve/node_modules/serve-handler/node_modules/mime-db Completed in 1433ms
+529 timing reifyNode:node_modules/serve/node_modules/mime-db Completed in 1436ms
+530 http fetch GET 200 https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz 1245ms (cache miss)
+531 timing reifyNode:node_modules/serve/node_modules/uri-js/node_modules/punycode Completed in 1438ms
+532 http fetch GET 200 https://registry.npmjs.org/content-disposition/-/content-disposition-0.5.2.tgz 1311ms (cache miss)
+533 timing reifyNode:node_modules/serve/node_modules/content-disposition Completed in 1442ms
+534 http fetch GET 200 https://registry.npmjs.org/rc/-/rc-1.2.8.tgz 1323ms (cache miss)
+535 timing reifyNode:node_modules/serve/node_modules/rc Completed in 1446ms
+536 http fetch GET 200 https://registry.npmjs.org/chalk/-/chalk-5.0.1.tgz 1282ms (cache miss)
+537 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-2.2.1.tgz 1318ms (cache miss)
+538 timing reifyNode:node_modules/serve/node_modules/path-to-regexp Completed in 1446ms
+539 timing reifyNode:node_modules/serve/node_modules/debug Completed in 1444ms
+540 http fetch GET 200 https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz 1259ms (cache miss)
+541 timing reifyNode:node_modules/serve/node_modules/punycode Completed in 1448ms
+542 http fetch GET 200 https://registry.npmjs.org/@zeit/schemas/-/schemas-2.29.0.tgz 1178ms (cache miss)
+543 timing reifyNode:node_modules/serve/node_modules/chalk Completed in 1445ms
+544 timing reifyNode:node_modules/serve/node_modules/emoji-regex Completed in 1452ms
+545 timing reifyNode:node_modules/serve/node_modules/@zeit/schemas Completed in 1446ms
+546 timing reifyNode:node_modules/serve/node_modules/minimist Completed in 1464ms
+547 http fetch GET 200 https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-3.3.2.tgz 1353ms (cache miss)
+548 timing reifyNode:node_modules/serve/node_modules/registry-auth-token Completed in 1480ms
+549 timing reifyNode:node_modules/serve/node_modules/uri-js Completed in 1524ms
+550 http fetch GET 200 https://registry.npmjs.org/clipboardy/-/clipboardy-3.0.0.tgz 1360ms (cache miss)
+551 timing reifyNode:node_modules/serve/node_modules/clipboardy Completed in 1575ms
+552 http fetch GET 200 https://registry.npmjs.org/type-fest/-/type-fest-2.19.0.tgz 1476ms (cache miss)
+553 timing reifyNode:node_modules/serve/node_modules/type-fest Completed in 1667ms
+554 http fetch GET 200 https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz 1856ms (cache miss)
+555 timing reifyNode:node_modules/serve/node_modules/ajv Completed in 2083ms
+556 timing reify:unpack Completed in 2094ms
+557 timing reify:unretire Completed in 0ms
+558 timing build:queue Completed in 4ms
+559 timing build:link:node_modules/serve/node_modules/is-docker Completed in 3ms
+560 timing build:link:node_modules/serve/node_modules/which Completed in 8ms
+561 timing build:link:node_modules/serve/node_modules/rc Completed in 8ms
+562 timing build:link:node_modules/serve Completed in 15ms
+563 timing build:link Completed in 16ms
+564 timing build:deps Completed in 21ms
+565 timing build Completed in 21ms
+566 timing reify:build Completed in 23ms
+567 timing reify:trash Completed in 0ms
+568 timing reify Completed in 9673ms
+569 silly ADD node_modules/serve
+570 silly ADD node_modules/serve/node_modules/color-name
+571 silly ADD node_modules/serve/node_modules/color-convert
+572 silly ADD node_modules/serve/node_modules/has-flag
+573 silly ADD node_modules/serve/node_modules/supports-color
+574 silly ADD node_modules/serve/node_modules/is-fullwidth-code-point
+575 silly ADD node_modules/serve/node_modules/ansi-styles
+576 silly ADD node_modules/serve/node_modules/isexe
+577 silly ADD node_modules/serve/node_modules/strip-json-comments
+578 silly ADD node_modules/serve/node_modules/minimist
+579 silly ADD node_modules/serve/node_modules/ini
+580 silly ADD node_modules/serve/node_modules/deep-extend
+581 silly ADD node_modules/serve/node_modules/rc
+582 silly ADD node_modules/serve/node_modules/registry-url
+583 silly ADD node_modules/serve/node_modules/registry-auth-token
+584 silly ADD node_modules/serve/node_modules/ansi-regex
+585 silly ADD node_modules/serve/node_modules/strip-ansi
+586 silly ADD node_modules/serve/node_modules/emoji-regex
+587 silly ADD node_modules/serve/node_modules/eastasianwidth
+588 silly ADD node_modules/serve/node_modules/shebang-regex
+589 silly ADD node_modules/serve/node_modules/concat-map
+590 silly ADD node_modules/serve/node_modules/balanced-match
+591 silly ADD node_modules/serve/node_modules/brace-expansion
+592 silly ADD node_modules/serve/node_modules/punycode
+593 silly ADD node_modules/serve/node_modules/range-parser
+594 silly ADD node_modules/serve/node_modules/path-to-regexp
+595 silly ADD node_modules/serve/node_modules/path-is-inside
+596 silly ADD node_modules/serve/node_modules/minimatch
+597 silly ADD node_modules/serve/node_modules/fast-url-parser
+598 silly ADD node_modules/serve/node_modules/content-disposition
+599 silly ADD node_modules/serve/node_modules/mimic-fn
+600 silly ADD node_modules/serve/node_modules/is-docker
+601 silly ADD node_modules/serve/node_modules/which
+602 silly ADD node_modules/serve/node_modules/shebang-command
+603 silly ADD node_modules/serve/node_modules/path-key
+604 silly ADD node_modules/serve/node_modules/strip-final-newline
+605 silly ADD node_modules/serve/node_modules/signal-exit
+606 silly ADD node_modules/serve/node_modules/onetime
+607 silly ADD node_modules/serve/node_modules/npm-run-path
+608 silly ADD node_modules/serve/node_modules/merge-stream
+609 silly ADD node_modules/serve/node_modules/is-stream
+610 silly ADD node_modules/serve/node_modules/human-signals
+611 silly ADD node_modules/serve/node_modules/get-stream
+612 silly ADD node_modules/serve/node_modules/cross-spawn
+613 silly ADD node_modules/serve/node_modules/ms
+614 silly ADD node_modules/serve/node_modules/mime-db
+615 silly ADD node_modules/serve/node_modules/negotiator
+616 silly ADD node_modules/serve/node_modules/mime-types
+617 silly ADD node_modules/serve/node_modules/vary
+618 silly ADD node_modules/serve/node_modules/safe-buffer
+619 silly ADD node_modules/serve/node_modules/on-headers
+620 silly ADD node_modules/serve/node_modules/debug
+621 silly ADD node_modules/serve/node_modules/compressible
+622 silly ADD node_modules/serve/node_modules/bytes
+623 silly ADD node_modules/serve/node_modules/accepts
+624 silly ADD node_modules/serve/node_modules/is-wsl
+625 silly ADD node_modules/serve/node_modules/execa
+626 silly ADD node_modules/serve/node_modules/arch
+627 silly ADD node_modules/serve/node_modules/wrap-ansi
+628 silly ADD node_modules/serve/node_modules/widest-line
+629 silly ADD node_modules/serve/node_modules/type-fest
+630 silly ADD node_modules/serve/node_modules/string-width
+631 silly ADD node_modules/serve/node_modules/cli-boxes
+632 silly ADD node_modules/serve/node_modules/camelcase
+633 silly ADD node_modules/serve/node_modules/ansi-align
+634 silly ADD node_modules/serve/node_modules/ansi-align/node_modules/ansi-regex
+635 silly ADD node_modules/serve/node_modules/ansi-align/node_modules/strip-ansi
+636 silly ADD node_modules/serve/node_modules/ansi-align/node_modules/emoji-regex
+637 silly ADD node_modules/serve/node_modules/ansi-align/node_modules/string-width
+638 silly ADD node_modules/serve/node_modules/uri-js
+639 silly ADD node_modules/serve/node_modules/uri-js/node_modules/punycode
+640 silly ADD node_modules/serve/node_modules/require-from-string
+641 silly ADD node_modules/serve/node_modules/json-schema-traverse
+642 silly ADD node_modules/serve/node_modules/fast-deep-equal
+643 silly ADD node_modules/serve/node_modules/update-check
+644 silly ADD node_modules/serve/node_modules/serve-handler
+645 silly ADD node_modules/serve/node_modules/serve-handler/node_modules/mime-db
+646 silly ADD node_modules/serve/node_modules/serve-handler/node_modules/mime-types
+647 silly ADD node_modules/serve/node_modules/is-port-reachable
+648 silly ADD node_modules/serve/node_modules/compression
+649 silly ADD node_modules/serve/node_modules/clipboardy
+650 silly ADD node_modules/serve/node_modules/chalk-template
+651 silly ADD node_modules/serve/node_modules/chalk-template/node_modules/ansi-styles
+652 silly ADD node_modules/serve/node_modules/chalk-template/node_modules/chalk
+653 silly ADD node_modules/serve/node_modules/chalk
+654 silly ADD node_modules/serve/node_modules/boxen
+655 silly ADD node_modules/serve/node_modules/arg
+656 silly ADD node_modules/serve/node_modules/ajv
+657 silly ADD node_modules/serve/node_modules/@zeit/schemas
+658 timing command:install Completed in 9712ms
+659 verbose exit 0
+660 timing npm Completed in 12009ms
+661 info ok

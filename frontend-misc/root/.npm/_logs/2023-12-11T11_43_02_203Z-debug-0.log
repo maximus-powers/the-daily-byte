@@ -1,0 +1,36 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.1.0
+2 info using node@v20.9.0
+3 timing npm:load:whichnode Completed in 35ms
+4 timing config:load:defaults Completed in 57ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 30ms
+6 timing config:load:builtin Completed in 32ms
+7 timing config:load:cli Completed in 27ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:/app/.npmrc Completed in 1ms
+10 timing config:load:project Completed in 19ms
+11 timing config:load:file:/root/.npmrc Completed in 28ms
+12 timing config:load:user Completed in 28ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 2ms
+14 timing config:load:global Completed in 2ms
+15 timing config:load:setEnvs Completed in 9ms
+16 timing config:load Completed in 186ms
+17 timing npm:load:configload Completed in 186ms
+18 timing config:load:flatten Completed in 14ms
+19 timing npm:load:mkdirpcache Completed in 86ms
+20 timing npm:load:mkdirplogs Completed in 2ms
+21 verbose title npm run build
+22 verbose argv "run" "build"
+23 timing npm:load:setTitle Completed in 12ms
+24 timing npm:load:display Completed in 18ms
+25 verbose logfile logs-max:10 dir:/root/.npm/_logs/2023-12-11T11_43_02_203Z-
+26 verbose logfile /root/.npm/_logs/2023-12-11T11_43_02_203Z-debug-0.log
+27 timing npm:load:logFile Completed in 303ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 3298ms
+31 silly logfile done cleaning log files
+32 timing command:run Completed in 166837ms
+33 verbose exit 0
+34 timing npm Completed in 172605ms
+35 info ok
