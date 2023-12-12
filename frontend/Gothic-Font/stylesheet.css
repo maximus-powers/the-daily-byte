@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Rochester';
+    src: url('Rochester.woff2') format('woff2'),
+        url('Rochester.woff') format('woff'),
+        url('Rochester.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

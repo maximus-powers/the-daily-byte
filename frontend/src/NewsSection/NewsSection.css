@@ -1,0 +1,28 @@
+.newsSectionContainer {
+    width:94%;
+    padding-left: 3%;
+    padding-bottom: 15px;
+    padding-right: 3%;
+    text-align: left;
+}
+
+.newsSectionContainer h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.newsSectionContainer h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.summaryPopup {
+    position: absolute;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}

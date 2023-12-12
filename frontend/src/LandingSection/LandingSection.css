@@ -1,0 +1,32 @@
+.landing {
+    display: flex;
+}
+
+.imageContainer img {
+    max-width: 100%;  /* Ensures the image doesn't exceed the container's width */
+    height: auto;     /* Maintains the image's aspect ratio */
+}
+
+.imageContainer {
+    flex: 1;
+    /* width:45%; */
+    padding-left: 3%;
+    text-align: right;
+}
+
+.landingTextContainer {
+    flex: 1;
+    /* width:45%; */
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: left;
+}
+
+.landingHeadline {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.landingText {
+    margin: 0;
+}

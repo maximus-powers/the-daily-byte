@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rochester:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-averia-serif-libre: "Averia Serif Libre";
+  --font-inherit: inherit;
+  --font-rochester: Rochester;
+
+  /* font sizes */
+  --font-size-xs: 12px;
+
+  /* Colors */
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-11xs: 2px;
+  --gap-42xl: 61px;
+}

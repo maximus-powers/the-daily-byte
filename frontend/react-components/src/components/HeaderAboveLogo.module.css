@@ -1,0 +1,11 @@
+.aiPoweredNews {
+  margin: 0;
+  position: relative;
+}
+.headerAboveLogo {
+  width: 357px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

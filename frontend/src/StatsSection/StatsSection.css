@@ -1,0 +1,61 @@
+.econ-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;  /* Adjusted container width */
+    margin: 0 auto;  /* Auto margin for horizontal centering */
+    position: relative;
+}
+
+.econ-section .charts-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    height: 150px;
+    scroll-snap-type: x mandatory; /* Ensures smooth scrolling and snapping */
+}
+
+/* Specific chart styles */
+.individual_chart {
+    width: 30%; /* Each chart takes 30% of the parent's width */
+    flex: 0 0 30%; /* Adjust flex-basis to ensure proper sizing */
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+.econ-section h2 {
+    text-align: center;
+    font-size: 17px;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-tooltip {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.custom-tooltip .label {
+    margin: 0;
+    font-weight: bold;
+}
+
+.custom-tooltip .intro {
+    margin: 0;
+}

@@ -1,0 +1,35 @@
+/* AudioSection.css */
+
+.audioPlayerContainer {
+    text-align: center;
+    margin: 0 auto;
+    margin: 20px 12px 30px 12px;
+    background-color: #000000; /* Dark background */
+    color: #4e4e4e; /* Light text */
+    padding: 10px 15px 10px 15px;
+    border-radius: 0px; /* Sharp edges */
+}
+
+.audioElement {
+    display: none; /* Hide the default audio player */
+}
+
+.audioControlButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(237, 237, 237); /* Light text */
+    border: none;
+    padding: 0px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 0; /* Sharp edges */
+    user-select: none; /* Prevent text selection */
+}
+
+.audioControlButton h1 {
+    margin: 0; /* Remove default margin of H1 */
+    font-size: 20em; /* Adjust font size as needed */
+    user-select: none; /* Prevent text selection */
+}

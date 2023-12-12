@@ -1,0 +1,117 @@
+/* Hero stuff */
+.hero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for header and logo */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+}
+
+/* Header item style */
+.header-item {
+  margin: 0px;
+  font-family: 'Averia Serif Libre', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header-item.left {
+  text-align: left;
+  margin-left: 3%;
+  flex-grow: 1;
+}
+
+.header-item.right {
+  text-align: right;
+  margin-right: 3%;
+  flex-grow: 1;
+}
+
+/* Logo Styles */
+.theDailyByte {
+  flex-grow: 0; /* prevent the logo from growing */
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  -webkit-text-stroke: 1px #292929;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 46px;
+  color: #292929;
+  font-family: 'Rochester', fallbackFont, sans-serif;
+}
+
+/* Initially hide the desktop version of the logo */
+.desktop-hidden {
+  display: none;
+}
+
+/* Datebar styles */
+.dateBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 2px 2%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.vol {
+  text-align: left;
+  flex: 1;
+}
+
+.date {
+  text-align: center;
+  flex: 4;
+}
+
+.price {
+  text-align: right;
+  flex: 1;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .mobile-visible {
+    display: block;
+  }
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+/* Desktop view styles */
+@media (min-width: 769px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-hidden {
+    display: block;
+  }
+}

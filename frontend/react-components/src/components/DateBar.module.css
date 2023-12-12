@@ -1,0 +1,72 @@
+.dateBarChild {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 2px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.h5,
+.mondayDecember21,
+.vol1 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.h5,
+.mondayDecember21 {
+  text-align: center;
+}
+.h5 {
+  text-align: right;
+}
+.dateBar,
+.frame {
+  display: flex;
+  align-items: flex-start;
+}
+.frame {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dateBar {
+  width: 359px;
+  flex-direction: column;
+  padding: 1px 0 0;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  gap: var(--gap-11xs);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+  font-family: var(--font-averia-serif-libre);
+}
+@media screen and (max-width: 1200px) {
+  .frame {
+    flex-direction: row;
+    gap: var(--gap-42xl);
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  .frame {
+    flex-direction: row;
+    gap: var(--gap-42xl);
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .frame {
+    flex-direction: row;
+    gap: var(--gap-42xl);
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

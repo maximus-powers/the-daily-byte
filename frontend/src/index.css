@@ -1,0 +1,126 @@
+/* Fonts */
+@font-face {
+  font-family: 'Rochester';
+  src: url('../Gothic-Font/Rochester.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap');
+
+/* Text Styles */
+h1 {
+  font-family: 'Rochester', sans-serif;
+  margin: 1px;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Averia Serif Libre', sans-serif;
+  margin: 1px;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic; /* Add this line to make it italic */
+}
+
+h3 {
+  font-family: 'Averia Serif Libre', sans-serif;
+  margin: 1px;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+h4 {
+  font-family: 'Averia Serif Libre', sans-serif;
+  margin: 1px;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 16px;
+  /* font-weight: bold; */
+  font-style: italic;     /* Makes the text italic */
+  color: grey;            /* Sets the text color to grey */
+}
+
+h5 {
+  font-family: 'Averia Serif Libre', sans-serif;
+  margin: 1px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+h6 {
+  font-family: 'Averia Serif Libre', sans-serif;
+  margin: 1px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #D9D9D9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.newsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logoLink {
+  text-decoration: none;  /* This removes the underline */
+  color: inherit; /* ensures the text color remains the same, in case it changes due to the link */
+}
+
+/* LAYOUT */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* row holds columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* cols */
+.col-md-4 {
+  width: 33.3333%; /* 3 cols */
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-md-4 {
+      width: 100%; /* stack columns */
+  }
+}
+
+/* Apply alignment adjustments for desktop screens only */
+@media (min-width: 768px) {
+  .container {
+    padding: 0.5% 2%; /* Match the horizontal padding with .dateBar on desktop */
+  }
+  h6{font-size: 13px;}
+}
