@@ -344,6 +344,15 @@ class dbObject:
             print("Error calling econ data:", e)
             return None
         
+    # check that econ data exists today. We only want to call it once bc we only get a few calls per day for free
+    def econ_data_exists_today(self, user_id):
+        query = "SELECT entry_date FROM econ_data WHERE userID = %s"
+        self.cur.execute(query, (user_id,))
+        timestamp = self.cur.fetchone()
+        entry_date = timestamp['entry_date'].date() # extract date
+        today = datetime.today().date()
+        return entry_date == today # check if they're the same
+        
 ######################### Get content functions #########################
 
     def call_all_content(self, user_id):

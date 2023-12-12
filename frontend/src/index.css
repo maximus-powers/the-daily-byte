@@ -104,7 +104,7 @@ code {
 
 /* cols */
 .col-md-4 {
-  width: 33.3333%; /* 3 cols */
+  width: 33%; /* 3 cols */
   padding-right: 15px;
   padding-left: 15px;
   box-sizing: border-box;

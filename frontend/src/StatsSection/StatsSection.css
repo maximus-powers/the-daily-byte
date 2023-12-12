@@ -2,16 +2,21 @@
     display: flex;
     justify-content: space-around;
     width: 100%;  /* Adjusted container width */
-    margin: 0 auto;  /* Auto margin for horizontal centering */
+    margin: 0;  /* Auto margin for horizontal centering */
     position: relative;
+    -webkit-scrollbar {
+        display: none;  /* Hide scrollbar for Webkit browsers */
+    }
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
 .econ-section .charts-container {
     display: flex;
     overflow-x: auto;
     width: 100%;
-    height: 150px;
+    height: 130px;
     scroll-snap-type: x mandatory; /* Ensures smooth scrolling and snapping */
+    
 }
 
 /* Specific chart styles */
@@ -24,7 +29,9 @@
 
 .econ-section h2 {
     text-align: center;
-    font-size: 17px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .popup {

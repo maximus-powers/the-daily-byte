@@ -8,7 +8,7 @@ import os
 class LLMObject:
     def __init__(self):
         self.API_KEY = os.environ.get('OPENAI_API_KEY')
-        self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7, openai_api_key=self.API_KEY)
+        self.llm = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.7, openai_api_key=self.API_KEY)
         self.current_date = datetime.date.today()
 
     # rank headlines on importance
@@ -16,17 +16,18 @@ class LLMObject:
     def rank_dictionary(self, headlines):
         prompt = ChatPromptTemplate.from_messages (
             [
-                ("system", "You are a world-class algorithm for ranking news headlines based on their importance, and filtering out videos"),
-                ("human", "Rank the following headlines based on their relevance to a mass audience. Remove key-value pairs that contain videos. Also remove any key-value pairs that are too similar to another pair (there should only be one article of any given news story/event): {input}"),
-                ("human", "Tip: Make sure to answer in the correct format. Do not modify the values in any of the key-value pairs"),
+                ("system", "You are a world-class algorithm for ranking news headlines based on their importance to US society, and filtering out videos"),
+                ("human", "Rank the following headlines based on their relevance to a mass audience, stories that impact more people are more important. Remove key-value pairs that contain videos. Also remove any key-value pairs that are too similar to another pair (there should only be one article of any given news story/event): {input}"),
+                ("human", "When estimating importance, stay away from stories about just one person, aim for stories that impact a large number of people. Stories about sports or entertainment are unimportant, prioritize politics, health, and world events."),
+                ("human", "Tip: Make sure to answer in the correct format. Do not modify the values in any of the key-value pairs. Do not modify the headlines"),
             ]
         )
-        headlines_str = ', '.join(headlines.keys())
+        headlines_str = '\n'.join(headlines.keys())
         chain = create_structured_output_chain(importance_json_schema, self.llm, prompt, verbose=False)
         result = chain.run(headlines_str)
         
         # sort headlines by importance
-        sorted_headlines = sorted(result["headlines"], key=lambda x: x['importance'], reverse=False)
+        sorted_headlines = sorted(result["headlines"], key=lambda x: x['importance'], reverse=True)
 
         # create a ranked list with optimized structure
         ranked_list = []
@@ -59,30 +60,26 @@ class LLMObject:
         
 
     def summarize_article(self, article_url, num_of_chars):
-        print("summarize started")
         # load the article content from the URL using Selenium
         loader = SeleniumURLLoader(urls=[article_url])
         try:
             data = loader.load()
-            print("article loaded")
         except Exception as e:
             print(f"Error loading article: {e}")
             return False
 
         # check if data is empty or access was denied
         if not data or "Access denied" in data[0].page_content or "403" in data[0].page_content or "subscription" in data[0].page_content:
-            print("Access denied or no data")
             return False
 
         # truncate the article text if too long
         article_text = data[0].page_content[:35000] if len(data[0].page_content) > 35000 else data[0].page_content
-        print("article truncated")
 
         # structured chain prompt for summarization
         prompt = ChatPromptTemplate.from_messages(
             [
-                ("system", "You are an AI language model. Summarize the following article in {num_chars} characters: {input}. Make sure the summary is concise and within the character limit. Remember to write in the context that today's date is: {date}, and the article was published in the last 36 hours."),
-                ("human", "Please summarize the article while keeping within the character limit of {num_chars} characters."),
+                ("system", "You are an AI language model. Summarize the following article in exactly {num_chars} characters: {input}. Make sure the summary is concise and within the character limit. Remember to write in the context that today's date is: {date}, and the article was published in the last 36 hours."),
+                ("human", "Tip: Make sure that your summary does not exceed the character limit of {num_chars} characters."),
             ]
         )
         chain = create_structured_output_chain(summary_schema, self.llm, prompt, verbose=False)
@@ -90,10 +87,10 @@ class LLMObject:
         try:
             result = chain.run(input=article_text, num_chars=num_of_chars, date=self.current_date)
             summary = result["summary"]
+            print(summary)
             
             # check if the LLM indicates it cannot generate a summary
             if "can't summarize" in summary or "no article" in summary or "Sorry," in summary:
-                print("LLM unable to generate a summary")
                 return False
             else:
                 return summary

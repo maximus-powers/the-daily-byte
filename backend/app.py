@@ -117,6 +117,9 @@ def refresh_content():
                 if summary is not False:
                     results[category].append({'headline': new_headline, 'summary': summary, 'url': articles_ordered[i]['url']})
                 i += 1
+                if i > len(articles_ordered):
+                    print('Not enough articles to rewrite')
+                    break
                 
             # update the category table of db
             db_obj.update_category_content(2, category, results[category])
@@ -142,8 +145,9 @@ def refresh_content():
         db_obj.add_audio_file(2, audio_and_script['audio'], audio_and_script['script']) # update the db
 
     ############### REFRESH ECON DATA ##############
-    econ_data = econ_obj.get_econ_data()
-    db_obj.update_econ_data(2, econ_data)
+    if not db_obj.econ_data_exists_today(2):
+        econ_data = econ_obj.get_econ_data()
+        db_obj.update_econ_data(2, econ_data)
 
     db_obj.close()
 
@@ -151,7 +155,7 @@ def refresh_content():
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=refresh_content, trigger=CronTrigger(hour=4, minute=00)) # runs at 4am
 scheduler.start()
-# refresh_content() # run it once on startup
+refresh_content() # run it once on startup
 
 if __name__ == '__main__':
     try:
