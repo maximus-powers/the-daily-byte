@@ -25,7 +25,7 @@ function App() {
     useEffect(() => {
         const emailToSend = isAuthenticated ? userEmail : 'powersms@clarkson.edu';
 
-        fetch('http://tdb-api.maximus-powers.com/get_content', {
+        fetch('https://tdb-api.maximus-powers.com/get_content', {
             headers: {
                 'Accept': 'application/json',
                 'Email': emailToSend

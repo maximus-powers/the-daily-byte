@@ -16,7 +16,7 @@ const Hero = ({ name, vol }) => {
                 </section>
 
                 <h6 className="header-item right">
-                    <a href="http://maximus-powers.com" 
+                    <a href="https://maximus-powers.com" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        style={{ color: 'black', textDecoration: 'overline' }}>

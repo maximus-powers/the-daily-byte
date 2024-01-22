@@ -34,7 +34,7 @@ const EconSection = ({ markets_data , econ_data }) => {
     // Domain calculations
     const SPYYDomain = calculateYDomain(sortedSPY, 'close_price', 0.05, 0.02); // first float is top/bottom padding, second is threshold from avg to depict
     const ETHYDomain = calculateYDomain(sortedETH, 'close_price', 0.05, 0.1);
-    const ITBYDomain = calculateYDomain(sortedITD, 'close_price', 0.2, 0.5);
+    const ITBYDomain = calculateYDomain(sortedITD, 'close_price', 0.2, 0.5); // this is super padded cuz it was going bananas
     const GDPYDomain = calculateYDomain(sortedGDP, 'value', 0.05, 0.05);
     const CPIYDomain = calculateYDomain(sortedCPI, 'value', 0.05, 0.02);
     const FedYDomain = calculateYDomain(sortedFed, 'value', 0.05, 0.1);
